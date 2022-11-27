@@ -1,10 +1,10 @@
 const { REST, Routes } = require("discord.js")
 const { Client, GatewayIntentBits } = require("discord.js")
-const process = require("dotenv")
-process.config()
+require("dotenv").config()
 
 // Bei den Intents musst du vielleicht später was hinzufügen (kommt darauf an was du noch machen willst)
 const TOKEN = process.env.TOKEN
+const CLIENT_ID = process.env.CLIENT_ID
 const client = new Client({ intents: [GatewayIntentBits.Guilds] })
 
 // Hier deine commands
